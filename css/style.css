@@ -379,6 +379,14 @@ body {
   padding-right: 15px;
 }
 
+.services-item-link:hover {
+  color: #f0bf5f;
+}
+
+.services-item-link:active {
+  color: #A47312;
+}
+
 .services-item-descr {
   margin: 0;
   max-width: 432px;
@@ -388,7 +396,7 @@ body {
 }
 
 /* advantages */
-.advantages-container {
+.advantages {
   margin-bottom: 70px;
 }
 
@@ -398,11 +406,64 @@ body {
 
 .advantages-item {
   width: 276px;
+  height: 276px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  background-position: 45px 40px;
+  background-repeat: no-repeat;
+}
+
+.advantages-item:nth-child(-n + 4) {
   margin-bottom: 22px;
+}
+
+.advantages-item.bath {
+  background-image: url(../img//bath.svg);
+}
+
+.advantages-item.hanger {
+  background-image: url(../img//hanger.svg);
+}
+
+.advantages-item.heating {
+  background-image: url(../img/heating.svg);
+}
+
+.advantages-item.hotel-key {
+  background-image: url(../img/hotel-key.svg);
+}
+
+.advantages-item.parking {
+  background-image: url(../img/parking.svg);
+}
+
+.advantages-item.reception {
+  background-image: url(../img/reception.svg);
+}
+
+.advantages-item.security-box {
+  background-image: url(../img/security-box.svg);
+}
+
+.advantages-item.swimming-pool {
+  background-image: url(../img/swimming-pool.svg);
 }
 
 .advantages-item:not(:nth-child(4n)) {
   margin-right: 22px;
+}
+
+.advantages-item-wrapper {
+  display: block;
+  margin-top: 116px;
+  margin-left: 45px;
+  width: 189px;
+  height: 128px;
+}
+
+.advantages-item-descr {
+  font-size: 16px;
+  line-height: 200%;
 }
 
 /* placement */
@@ -411,10 +472,69 @@ body {
 }
 
 .placement-item {
+  position: relative;
   width: 374px;
+  height: 440px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 15px;
   margin-bottom: 24px;
 }
 
 .placement-item:not(:nth-child(3n)) {
   margin-right: 24px;
+}
+
+.placement-text {
+  margin-top: 32px;
+}
+
+.placement-item-price-first {
+  margin-left: 45px;
+  font-size: 16px;
+  color: #999;
+}
+
+.placement-item-price-second {
+  font-size: 20px;
+}
+
+.placement-item-price-third {
+  font-size: 16px;
+  margin-right: 52px;
+}
+
+.placement-rating {
+  display: inline;
+}
+
+.placement-item-title {
+  margin-left: 45px;
+  font-size: 16px;
+}
+
+.placement-item-descr {
+  margin-left: 45px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #999;
+}
+
+.placement-btn {
+  margin-left: 45px;
+}
+
+.placement-item-link {
+  position: absolute;
+  left: 54px;
+  bottom: 27px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  color: #ffffff;
+  z-index: 1;
+  background-image: url(../img/placement-link-arrow.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 15px;
 }
