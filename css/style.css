@@ -17,9 +17,51 @@ img {
   max-width: 100%;
 }
 
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Light'),
+  url('../fonts/MullerLight.woff2') format('woff2'),
+  url('../fonts/MullerLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Regular'),
+  url('../fonts/MullerRegular.woff2') format('woff2'),
+  url('../fonts/MullerRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Medium'),
+  url('../fonts/MullerMedium.woff2') format('woff2'),
+  url('../fonts/MullerMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Bold'),
+  url('../fonts/MullerBold.woff2') format('woff2'),
+  url('../fonts/MullerBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   min-width: 1200px;
-  font-family: 'font', sans-serif;
+  background-color: #e5e5e5;
+  font-family: 'Muller', sans-serif;
+  font-weight: 400;
 }
 
 /* glob */
@@ -36,6 +78,33 @@ body {
   cursor: pointer;
 }
 
+.btn {
+  padding: 13px 20px;
+  background-color: #ffffff;
+  border: 1px solid #cc9933;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #cc9933;
+}
+
+.btn:hover {
+  background-color: #cc9933;
+  color: #ffffff;
+}
+
+.btn:focus {
+  background-color: #cc9933;
+  outline-color: #cc9933;
+  color: #ffffff;
+}
+
+.btn:active {
+  background-color: #A47312;
+  border-color: #A47312;
+  outline: none;
+  color: #ffffff;
+}
+
 .flex {
   display: flex;
 }
@@ -50,7 +119,9 @@ body {
   margin: 0;
   margin-left: 40px;
   margin-bottom: 20px;
+  font-weight: 400;
   font-size: 40px;
+  color: #333;
 }
 
 /* header */
@@ -61,11 +132,14 @@ body {
 
 .header-top {
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .header-bottom {
   align-items: center;
-  padding: 30px 45px;
+  padding: 27px 45px;
+  background-color: #ffffff;
+  border-radius: 15px;
 }
 
 .header-logo {
@@ -74,10 +148,70 @@ body {
 
 .header-phone {
   margin-right: auto;
+  font-weight: 500;
+  font-size: 20px;
+  color: #666666;
+}
+
+.header-phone:hover {
+  color: #cc9933;
+}
+
+.header-phone:focus {
+  color: #cc9933;
+  outline: 1px solid #cc9933;
+}
+
+.header-phone:active {
+  color: #A47312;
+  outline: none;
+}
+
+.header-login {
+  font-size: 16px;
+  color: #cc9933;
+  background-image: url(../img/header-login.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 21px 12px;
+  padding-left: 26px;
+  padding-top: 2px;
+}
+
+.header-login:hover {
+  color: #f0bf5f;
+}
+
+.header-login:focus {
+  outline: 1px solid #cc9933;
+}
+
+.header-login:active {
+  outline: none;
+  color: #A47312;
 }
 
 .header-list-item:not(:last-child) {
   margin-right: 45px;
+}
+
+.header-link {
+  font-size: 16px;
+  color: #666666;
+}
+
+.header-link:hover {
+  color: #cc9933;
+}
+
+.header-link:focus {
+  color: #cc9933;
+  outline: 1px solid #cc9933;
+}
+
+.header-link:active {
+  color: #A47312;
+  outline: none;
 }
 
 .header-nav {
@@ -86,45 +220,111 @@ body {
 
 .header-tour-btn {
   margin-right: 40px;
+  min-width: 107px;
+}
+
+.header-call-btn {
+  min-width: 177px;
 }
 
 /* special */
-.special-container {
+.special {
   margin-bottom: 70px;
 }
 
 .special-items {
   flex-direction: column;
   flex-wrap: wrap;
-  height: 200px;
+  height: 540px;
 }
 
-.special-item:not(:last-child) {
+.special-item {
+  position: relative;
+  width: 573px;
+  height: 258px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.special-item-maldive {
+  background-image: url(../img/special-1.png);
+}
+
+.special-item-krite {
+  background-image: url(../img/special-2.png);
+}
+
+.special-item-luxe {
+  background-image: url(../img/special-3.png);
+}
+
+.special-item:first-child {
   margin-bottom: 24px;
 }
 
+.special-item:last-child {
+  height: 540px;
+}
+
 .special-item-text {
-  align-items: center;
+  position: absolute;
+  display: block;
+  bottom: 40px;
 }
 
 .special-item-title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  padding-left: 45px;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.special-item-title.last {
+  font-size: 60px;
 }
 
 .special-item-descr {
   margin: 0;
-  margin-right: 5px;
+  margin-bottom: 45px;
+  padding-left: 45px;
+  font-size: 20px;
+  opacity: 80%;
+  color: #ffffff;
+}
+
+.special-item-descr.last {
+  font-size: 30px;
+}
+
+.special-item-link {
+  padding-left: 45px;
+  font-size: 16px;
+  color: #f0bf5f;
+  background-image: url(../img/special-link-arrow.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 15px;
+}
+
+.special-item-link:active {
+  color: #ffffff;
 }
 
 /* about */
-.about-descr {
-  margin: 0;
+.about {
   margin-bottom: 70px;
 }
 
+.about-descr {
+  margin: 0;
+  max-width: 888px;
+  font-size: 16px;
+  line-height: 200%;
+}
+
 /* services */
-.services-container {
+.services {
   margin-bottom: 70px;
 }
 
@@ -134,11 +334,57 @@ body {
 
 .services-item {
   width: 570px;
+  height: 330px;
   margin-bottom: 24px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 .services-item:not(:nth-child(2n)) {
   margin-right: 24px;
+}
+
+.service-item-exclusive {
+  background-image: url(../img/services-1.jpg);
+}
+
+.service-item-banquet {
+  background-image: url(../img/services-2.jpg);
+}
+
+.service-item-pools {
+  background-image: url(../img/services-3.jpg);
+}
+
+.service-item-parking {
+  background-image: url(../img/services-4.jpg);
+}
+
+.service-item-wrapper {
+  display: block;
+  margin-top: 191px;
+}
+
+.services-item-link {
+  margin: 0;
+  padding-left: 45px;
+  font-size: 20px;
+  line-height: 200%;
+  color: #cc9933;
+  background-image: url(../img/services-link-arrow.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 15px;
+}
+
+.services-item-descr {
+  margin: 0;
+  max-width: 432px;
+  padding-left: 45px;
+  font-size: 16px;
+  line-height: 200%;
 }
 
 /* advantages */
